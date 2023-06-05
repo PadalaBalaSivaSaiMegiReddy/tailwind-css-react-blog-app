@@ -1,5 +1,7 @@
 import React from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import images from "../constants/images";
+import { useState } from "react";
 
 const NavItemsInfo = [
 	{ name: "Home" },
@@ -23,14 +25,38 @@ const NavItem = ({ name }) => {
 };
 
 export default function Header() {
+	const [navIsVisible, setnavIsVisible] = useState(false);
+
+	const navVisibilityHandler = () => {
+		setnavIsVisible((curState) => {
+			return !curState;
+		});
+	};
 	return (
 		<section>
 			<header className="container mx-auto px-5 flex justify-between py-4 items-center ">
 				<div>
-					<img src={images.Logo} alt="logo" />
+					<img className="w-16" src={images.Logo} alt="logo" />
 				</div>
-				<div className="flex gap-x-9 items-center">
-					<ul className="flex gap-x-2 font-semibold ">
+				<div className="z-50">
+					{navIsVisible ? (
+						<AiOutlineClose
+							onClick={navVisibilityHandler}
+							className="w-6 h-6"
+						/>
+					) : (
+						<AiOutlineMenu
+							onClick={navVisibilityHandler}
+							className="w-6 h-6"
+						/>
+					)}
+				</div>
+				<div
+					className={` ${
+						navIsVisible ? "-right-0 " : "-right-full"
+					} bg-dark-hard lg:bg-transparent z-[49] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 lg:static gap-x-9 items-center`}
+				>
+					<ul className="flex flex-col lg:flex-row gap-x-2 font-semibold ">
 						{NavItemsInfo.map((item) => (
 							<NavItem name={item.name} />
 						))}
