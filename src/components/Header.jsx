@@ -73,7 +73,6 @@ const NavItem = ({ item }) => {
 
 const Header = () => {
 	const [navIsVisible, setNavIsVisible] = useState(false);
-	const [profileDrowpdown, setProfileDrowpdown] = useState(false);
 
 	const navVisibilityHandler = () => {
 		setNavIsVisible((curState) => {
@@ -115,6 +114,6 @@ const Header = () => {
 			</header>
 		</section>
 	);
-}
+};
 
-export default Header
+export default Header;
