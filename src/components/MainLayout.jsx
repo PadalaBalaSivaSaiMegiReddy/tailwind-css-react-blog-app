@@ -7,7 +7,6 @@ export default function MainLayout({childern}) {
 		<div>
 			<Header />
 			{childern}
-			<Footer />
 		</div>
 	);
 }
