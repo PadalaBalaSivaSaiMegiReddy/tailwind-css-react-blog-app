@@ -1,2 +1,2 @@
-export {images} from './images';
+export {  images } from "./images";
 
