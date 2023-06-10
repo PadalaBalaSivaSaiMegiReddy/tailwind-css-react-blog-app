@@ -1,4 +1,5 @@
 import React from "react";
+import images from "../../../constants/images";
 
 function Hero() {
 	return (
@@ -27,7 +28,9 @@ function Hero() {
 					</ul>
 				</div>
 			</div>
-			<div></div>
+			<div>
+				<img src={images.HeroImage} alt="users are reading articles  " />
+			</div>
 		</section>
 	);
 }
