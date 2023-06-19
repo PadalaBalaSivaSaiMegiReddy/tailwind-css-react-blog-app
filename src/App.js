@@ -1,7 +1,6 @@
 import "./App.css";
 import HomePage from "./pages/home/Homepage";
 
-//yoyo
 function App() {
 	return (
 		<div className="App font-opensans">
