@@ -2,6 +2,7 @@ import React from 'react'
 import MainLayout from '../../components/MainLayout'
 import Hero from './container/Hero'
 import Articles from './container/Articles'
+import CTA from './container/CTA'
 
 export default function Homepage() {
   return (
@@ -9,6 +10,7 @@ export default function Homepage() {
     < MainLayout/>
     <Hero/>
     <Articles/>
+    <CTA/>
     </>
   )
 }
